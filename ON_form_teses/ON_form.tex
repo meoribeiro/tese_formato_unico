@@ -1,0 +1,259 @@
+%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %%
+%                OBSERVATORIO NACIONAL - MCT                              %
+%                DEPARTAMENTO DE POS GRADUACAO                            %
+%                PACOTE LaTeX PARA DISSERTACOES E TESES                                   % 
+%                SET 2013                                                          		%
+%                Este texto foi propositalmente digitado sem acentos!                     % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[12pt,letterpaper]{report} %define o estilo do documento, tamanho da fonte, ...
+%============================================================================================== %
+%   %    %   MEUS DADOS
+%============================================================================================== %
+\newcommand{\meunome}{Autor}
+\newcommand{\meutitulo}{Titulo}
+\newcommand{\meusubtitulo}{Sub titulo}
+\newcommand{\meuano}{ano}
+\newcommand{\meuorientador}{ {Orientador } }
+%\newcommand{\meucoorientador}{ {}}
+\newcommand{\titulacao}{Mestre/Doutor/qualificação} % ou mestre!
+\newcommand{\doctipe}{Dissertação de Mestrado}%ou Dissertacao de Mestrado, tese de doutorado...
+%============================================================================================== %
+%   %    % %   %    % %   %   INICIO DOS PREAMBULOS     % %   %    % %   %    %    %    %  %    %
+%============================================================================================== %
+
+
+%============================================================================================== %
+%   %    %   CODIFICACAO DO EDITOR LaTeX
+%============================================================================================== %
+% % % % % %  Habilite o correspondente ao seu tipo de Sistema/Editor.
+% % % % % %  Em ambos voce pode digitar os acentos normalmente!
+
+% ISO-8859-1 (WINDOWS usa este tipo de codificacao)
+%           \usepackage[T1]{fontenc}
+%           \usepackage{palatino}
+            \usepackage[latin1]{inputenc}
+
+% UTF-8    (LINUX usa geralmente este tipo de codificacao por default.)
+	    \usepackage[T1]{fontenc} %usa caracteres especiais
+%           \usepackage{type1cm}
+%           \usepackage{ucs}
+	    \usepackage{palatino}
+%            \usepackage[utf8x]{inputenc} %usa caracteres acentuados diretamente  AQUIIIIIIIIII___LINUXXXXXXX
+%============================================================================================== % 
+% % % % % %  OBSERVACAO 1:
+% % % % % %  Para mudar a codificaï¿½ï¿½o de um arquivo (no linux) use:
+% % % % % %     iconv -f UTF-8 -t ISO-8859-1 arquivo_em_utf8.txt > novo_arquivo_em_latin1.txt
+%============================================================================================== % 
+
+             \usepackage[brazil]{babel} %define a linguagem - portugues brasil
+%============================================================================================== % 
+%   %    %   FORMATACAO BASICA DO EDITOR LATEX
+%============================================================================================== %
+             \usepackage{latexsym,amsmath,amssymb,amsfonts,textcomp,marvosym,wasysym}
+             \usepackage{appendix}        	% pacote apendice
+             \usepackage{epigraph}
+
+%============================================================================================== %
+%   %    %   USANDO LINKS SIMBOLICOS
+%============================================================================================== %
+% % % % % %  Escolha colorlinks=false ou colorlinks=true
+             \usepackage{hyperref}
+             \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue,
+            pagecolor=blue, urlcolor=green,
+            pdfauthor={AUTOR DO TRABALHO},
+            pdftitle={TITULO DO TRABALHO},
+            pdfsubject={TESE ou DISSERTACAO + ANO},
+            pdfkeywords={PALAVRAS CHAVES},
+            pdfproducer={LaTeX},
+            pdfcreator={pdfLaTeX}} 
+            \usepackage{lastpage}
+%============================================================================================== %
+%   %    %   ELEMENTOS GRAFICOS
+%============================================================================================== %
+            \usepackage[all,knot,arc,import,poly]{xy}
+            \usepackage{picinpar}
+            \usepackage[]{graphicx}	% Figuras (pacote extendid0)
+            \usepackage{float}	
+            \usepackage{color}				% Cores
+            \usepackage[table]{xcolor}
+            \usepackage{subfig}				% Criar figura dividida em subfiguras
+            \graphicspath{{./figuras/}}		% Caminho para o diretorio das figuras
+            \usepackage{caption}	        % Customizar as legendas das figuras e das tabelas
+            \captionsetup[subfigure]{style=default, margin=0pt, parskip=0pt, 
+				    hangindent=0pt, indention=0pt, singlelinecheck=true, 
+				    labelformat=parens, labelsep=space}
+            \usepackage{multicol}			% Criar ambientes em colunas
+            \usepackage{verbatim}
+%============================================================================================== %
+%   %    %   TABELAS
+%============================================================================================== %
+            \usepackage{array}				% Elementos extras de formatacao
+            \usepackage{booktabs}			% Tabelas com excelente qualidade 
+            \usepackage{longtable}			% Para criar tabelas longas
+            \usepackage{lscape}				% layout da pagina em landscape
+%============================================================================================== %
+%   %    %   NOTAS DE RODAPE 
+%============================================================================================== %
+            \usepackage{footnote}			% notas de rodape em geral
+            \makesavenoteenv{tabular}		% Notas criadas nas tabelas ficam no fim das tabelas!
+
+%============================================================================================== %
+%   %    %  LAYOUT DA TESE: PAGINA
+%============================================================================================== %
+           \usepackage[Glenn]{fncychap}	   % 
+           \usepackage{fancyhdr}           % configuracao para cabecalhos e rodapes
+
+           \usepackage[dvips]{geometry}
+           \usepackage{setspace}
+
+           \geometry{left=30mm} 
+           \geometry{right=20mm} 
+           \geometry{top=30mm}
+           \geometry{bottom=20mm} 
+           \geometry{headheight=15pt}
+           \geometry{headsep=10mm}                  % espaco entre paragrafo e cabecalho
+           \geometry{footskip=10mm}                 % espaco entre parï¿½grafo e rodape
+
+           \linespread{1.3}
+           \setlength{\parindent}{15mm}             % indentacao do paragrafo
+           \setlength{\parskip}{6pt}                % espaco entre paragrafos
+           \setlength{\abovecaptionskip}{5pt}       % espaco entre legenda e tabela ou grafico
+           \setlength{\belowcaptionskip}{5pt}       % espaco entre legenda e tabela ou grafico
+           % % % %           SECOES E SUBSECOES                % % % % % % %
+           \setcounter{secnumdepth}{5}
+           \setcounter{tocdepth}{3}
+           
+           % % % % NAO ENUMERAR A FOLHA QUE MARCA UMA NOVA PARTE% % % % % % %
+           \makeatletter
+           \let\sv@endpart\@endpart
+           \def\@endpart{\thispagestyle{empty}\sv@endpart}
+           \makeatother
+           % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%============================================================================================== %
+%   %    %  LISTA DE ABREVIACOES
+%============================================================================================== %
+           %\usepackage[intoc,portuguese]{nomencl}	% Pacote que cria lista de abreviacoes
+	   \usepackage[portuguese]{nomencl}	% Pacote que cria lista de abreviacoes
+           \makenomenclature	                        % Comando para criar a lista
+%============================================================================================== % 
+% % % % % % OBSERVACAO 2: 
+% % % % % %
+% % % % % % Para poder criar a lista de simbolos e necessario fazer:
+% % % % % % No linux: Abra o terminal, no diretorio onde se encontra seu arquivo .tex, digite:
+% % % % % %         makeindex ON_form.nlo -s nomencl.ist -o ON_form.nls
+% % % % % % Mas, Se vc tiver compilado diretamente no Terminal, com 
+% % % % % %         pdflatex ON_form.tex
+% % % % % % este comando acima torna-se desnecessario, pois o indice ja tera sido criado!
+% % % % % % No Windows: Vc podera colocar este comando no RUN de seu editor TeX.
+%============================================================================================== % 
+
+
+%============================================================================================== %
+%   %    %  CABECALHO E RODAPE
+%============================================================================================== %
+            \usepackage{fancyhdr}
+            \fancyhead[LO,LE]{\textit\footnotesize\nouppercase\leftmark}
+            \fancyhead[RO,RE]{\textit\footnotesize\nouppercase\thepage}
+            \fancyfoot[CO,CE]{}
+%============================================================================================== %
+%   %    %  HIFENIZACAO CORRETA
+%============================================================================================== %
+          \hyphenation{e-xem-plos} %Coloce entre {} todas as palavras que nao forem corretamente
+
+%============================================================================================== %
+%   %    %  CRIANDO COMANDO PERSONALIZADOS 
+%============================================================================================== %
+
+            %\newcommand{\cao}{\c{c}\~ao }
+            %\newcommand{\coes}{\c{c}\~oes }
+            %\newcommand{\ii}{\'{\i}}
+
+%============================================================================================== %
+%   %    % %   %    % %   %   FIM DOS PREAMBULOS     % %   %    % %   %    %    %    % %   %    %
+%============================================================================================== %
+
+
+\begin{document}
+
+%============================================================================================== %
+%   %    %  LAYOUT DA TESE: MUDANDO O NOME DOS ELEMENTOS
+%============================================================================================== %
+           \renewcommand{\contentsname}{sumário}
+           \renewcommand{\partname}{Parte}
+           \renewcommand{\chaptername}{Capítulo}
+           \renewcommand{\appendixname}{Apendice}
+           \renewcommand{\bibname}{Referências}
+           \renewcommand{\figurename}{Figura}
+           \renewcommand{\listfigurename}{lista de figuras}
+           \renewcommand{\tablename}{Tabela}
+           \renewcommand{\listtablename}{lista de tabelas}
+           \renewcommand{\nomname}{lista de siglas}   % Nomeia a Lista como Lista de Simbolos
+           \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+           \renewcommand{\thetable}{\thechapter.\arabic{table}}
+
+
+%============================================================================================== %
+%   %    %  ELEMENTOS PRE-TEXTUAIS
+%============================================================================================== %
+
+            \pagenumbering{roman}
+
+            \include{capa}			%%% elemento obrigatorio
+            \include{contracapa}		%%% elemento obrigatorio
+%			\include{dedicatoria}		%%% elemento opcional
+            \include{agradecimento}		%%% elemento opcional
+%            \include{epigrafe}			%%% elemento opcional
+            \include{resumo}			%%% elemento obrigatorio
+            \include{abstract}			%%% elemento obrigatorio
+
+	    \clearpage
+            \listoffigures % iclui a lista de figuras				%%% elemento opcional
+            \addcontentsline{toc}{chapter}{\listfigurename}
+
+            \clearpage
+            \markboth{\nomname}{\nomname} 
+            \printnomenclature            % aqui inclui a lista de siglas ou simbolos ou abreviacoes.	%%% elemento obrigatorio
+        
+
+            \tableofcontents % inclui o sumario
+            \addcontentsline{toc}{chapter}{\contentsname}
+            \newpage
+
+%============================================================================================== %
+%   %    %  ELEMENTOS TEXTUAIS
+%============================================================================================== %
+            \pagestyle{fancy}
+            \pagenumbering{arabic}
+            \newpage\pagebreak
+
+            \include{introducao}
+            \include{dados}
+			\include{metodos}
+			\include{Resultados}
+			\include{Conclusao}
+			\include{Perspectivas}
+
+
+%============================================================================================== %
+%   %    %  ELEMENTOS POS-TEXTUAIS
+%============================================================================================== %
+
+
+           \appendix
+           \renewcommand{\setthesection}{\Alph{section}}
+           \include{apenda}
+	   			%\include{apendb}
+            
+            \clearpage
+            \listoftables  %inclui a lista de tabelas				%%% elemento opcional
+            \addcontentsline{toc}{chapter}{\listtablename}
+\begin{flushright}
+\begin{flushright}
+
+\end{flushright}
+\end{flushright}
+
+           \include{bibliografia}
+\end{document}
