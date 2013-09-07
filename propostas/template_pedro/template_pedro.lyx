@@ -145,14 +145,14 @@ Programa de Pós Graduação em Astronomia
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename on2.eps
 	lyxscale 50
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -175,7 +175,7 @@ status collapsed
 
 \series bold
 \size giant
-Implementação do G-mode e sua Aplicação à Taxonomia de Asteroides
+Titulo
 \end_layout
 
 \begin_layout Standard
@@ -185,10 +185,7 @@ Implementação do G-mode e sua Aplicação à Taxonomia de Asteroides
 \begin_inset VSpace 1.5cm
 \end_inset
 
-
-\series bold
-\size larger
-Pedro Henrique Aragão Hasselmann
+Autor
 \end_layout
 
 \begin_layout Standard
@@ -200,7 +197,7 @@ Pedro Henrique Aragão Hasselmann
 
 
 \size default
-Rio de Janeiro, 27 de Julho de 2011
+Rio de Janeiro, 99 de Brumario de 9999
 \end_layout
 
 \begin_layout Standard
@@ -379,7 +376,7 @@ Orientador
 
 \begin_layout Standard
 \align center
-Rio de Janeiro, Julho de 2011
+Rio de Janeiro, Brumario de 9999
 \end_layout
 
 \begin_layout Standard
